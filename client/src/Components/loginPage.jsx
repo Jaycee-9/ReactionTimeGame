@@ -33,8 +33,11 @@ function LoginPage() {
       const res = await signUpUser(userInput);
       if (res.status === 200) {
         setMessage("Sign up successfull! please wait");
-        setTimeout(() => {
-          setSignUp(true);
+
+        setTimeout(async () => {
+          const res = await loginUser(userInput);
+          localStorage.setItem("user", JSON.stringify(res.data));
+          navigate("/");
           setUserInput(loginField);
           setMessage(null);
         }, 2000);
