@@ -20,14 +20,14 @@ function Stats() {
   const filteredTimes = timeArray.filter((time) => time > 0);
 
   const bestReaction =
-    filteredTimes.length > 0 ? Math.min(...filteredTimes) : "NA";
+    filteredTimes.length > 0 ? Math.min(...filteredTimes) : 0;
 
   const averageReaction =
     filteredTimes.length > 0
       ? Math.round(
           filteredTimes.reduce((a, b) => a + b, 0) / filteredTimes.length
         )
-      : "NA";
+      : 0;
 
   return (
     <div className="max-w-[800px] w-full mx-auto p-5 mt-6 bg-gray-100 rounded-lg shadow-md">
