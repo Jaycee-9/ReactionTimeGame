@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login-page-styles {
+  max-width: 500px; /* Reduced max-width for a more compact form */
+  width: 100%;
+  margin: 50px auto; /* Centered with some space from the top */
+  padding: 40px;
+  background-color: #f0f8ff; /* Lighter and more modern background color */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.login-page-styles form {
+  width: 100%;
+  margin: 0 auto; /* Center the form */
+}
+
+.form-str {
+  position: relative;
+  padding: 10px 0; /* Added vertical padding */
+  margin: 20px 0; /* Margin for spacing between form elements */
+}
+
+.login-page-styles input {
+  display: block; /* Block display for inputs to stack them */
+  width: calc(100% - 40px); /* Full width minus margin */
+  height: 40px; /* Increased height for better touch support */
+  margin: 10px auto; /* Centered inputs */
+  padding: 10px 15px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 5px; /* Rounded input fields */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.login-signup-Btn {
+  width: 100%; /* Full width button */
+  height: 40px; /* Taller button for better usability */
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff; /* Blue background for the button */
+  color: #fff; /* White text color */
+  font-size: 16px; /* Slightly larger font */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.login-signup-Btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.choice-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
