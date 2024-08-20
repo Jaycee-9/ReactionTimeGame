@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8000";
+const URL = "reaction-time-server.vercel.app";
 
 export const signUpUser = async (credentials) => {
   try {
