@@ -18,51 +18,5 @@ Backend: Node.js, Express.js
 Database: MongoDB (for storing user data and scores)
 Authentication: JWT (JSON Web Token) for securing user accounts
 Styling: Tailwind CSS for responsive and modern UI
-Setup & Installation
-Prerequisites
-Ensure you have the following installed:
 
-Node.js
-MongoDB (local or cloud)
-Installation
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/Jaycee-9/reaction-time-game.git
-cd reaction-time-game
-Install server dependencies:
-
-bash
-Copy code
-cd server
-npm install
-Install client dependencies:
-
-bash
-Copy code
-cd ../client
-npm install
-Start the development servers:
-
-For the server:
-
-bash
-Copy code
-cd server
-npm run dev
-For the client:
-
-bash
-Copy code
-cd ../client
-npm start
-Configuration
-Create a .env file in the server directory and add your MongoDB URI and JWT secret:
-
-env
-Copy code
-MONGO_URI=your_mongo_db_uri
-JWT_SECRET=your_jwt_secret
-Adjust the API and client configurations if necessary.
 
