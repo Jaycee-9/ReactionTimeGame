@@ -1,4 +1,7 @@
 Reaction Time Game
+
+
+
 Overview
 This game is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and is designed to record and analyze user reaction times. The game provides insightful statistics such as total attempts, best time, and average reaction time for each player. Additionally, a leaderboard displays the top 3 fastest users.
 
