@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signUpUser, loginUser } from "../service/index";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
-
+import { Puff } from "react-loader-spinner";
 const loginField = {
   username: "",
   password: "",
@@ -13,9 +13,11 @@ function LoginPage() {
   const [signUp, setSignUp] = useState(true);
   const [message, setMessage] = useState(null);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (evt) => {
     evt.preventDefault();
+    setLoading(true);
     try {
       const res = await loginUser(userInput);
       localStorage.setItem("user", JSON.stringify(res.data));
@@ -23,12 +25,14 @@ function LoginPage() {
     } catch (error) {
       setMessage(error.response.data.msg);
     } finally {
+      setLoading(false);
       setUserInput(loginField);
     }
   };
 
   const handleSignUp = async (evt) => {
     evt.preventDefault();
+    setLoading(true);
     try {
       const res = await signUpUser(userInput);
       if (res.status === 200) {
@@ -44,6 +48,8 @@ function LoginPage() {
       }
     } catch (error) {
       setMessage(error.response.data.msg);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -92,7 +98,21 @@ function LoginPage() {
               />
             </label>
           </div>
-          <button className="login-signup-Btn">login</button>
+          {loading ? (
+            <div className="flex justify-center">
+              <Puff
+                visible={true}
+                height="30"
+                width="30"
+                color="#4fa94d"
+                ariaLabel="puff-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            </div>
+          ) : (
+            <button className="login-signup-Btn">login</button>
+          )}
         </form>
       ) : (
         // sign-up form
@@ -124,7 +144,21 @@ function LoginPage() {
             </label>
           </div>
 
-          <button className="login-signup-Btn">Sign-up</button>
+          {loading ? (
+            <div className="flex justify-center">
+              <Puff
+                visible={true}
+                height="30"
+                width="30"
+                color="#4fa94d"
+                ariaLabel="puff-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            </div>
+          ) : (
+            <button className="login-signup-Btn">Sign-up</button>
+          )}
         </form>
       )}
       <div>
