@@ -13,7 +13,7 @@ app.use(cors());
 app.use("/", router);
 
 app.get("/", (req, res) => {
-  res.json("server is running...!");
+  res.json("server is running");
 });
 
 Promise.all([connectToDb()])
