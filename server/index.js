@@ -3,7 +3,7 @@ import connectToDb from "./db/index.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import router from "./routes/routes.js";
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(bodyParser.json({ extended: true }));
