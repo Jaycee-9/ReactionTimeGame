@@ -29,7 +29,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/reaction-time-game.git
+git clone https://github.com/Jaycee-9/reaction-time-game.git
 cd reaction-time-game
 Install server dependencies:
 
