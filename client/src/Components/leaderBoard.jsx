@@ -17,8 +17,9 @@ function LeaderBoard() {
     userId: result.userId,
     time: result.time,
   }));
+  //skip the early click
   const filteredArray = resultArray.filter((score) => score.time > 0);
-  console.log(filteredArray);
+
   // Extract unique times and sort them
   const uniqueTimes = [
     ...new Set(filteredArray.map((score) => score.time)),
